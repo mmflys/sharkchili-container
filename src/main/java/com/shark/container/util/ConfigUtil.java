@@ -19,11 +19,11 @@ public class ConfigUtil {
 	 * @return instance of {@link ConfigConst}
 	 */
 	public static ConfigConst getOrDefault(Properties properties, String key, ConfigConst defaultValue){
-		Object name=properties.get(key);
-		if (name==null){
+		Object value=properties.get(key);
+		if (value==null){
 			return defaultValue.getDefault();
 		}else {
-			return defaultValue.getByName(name.toString());
+			return defaultValue.getByName(value.toString());
 		}
 	}
 
